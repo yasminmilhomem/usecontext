@@ -1,4 +1,10 @@
-export function HandleCounter({counter, setCounter}){
+import { useContext } from "react";
+import { CounterContext } from "../contexts/CounterContext";
+
+export function HandleCounter(){
+    //utiliza-se chaves, pois ele disponibiliza um objeto
+    const {counter, setCounter} = useContext(CounterContext)
+
     function increaseCounter(){
         setCounter(counter + 1);
     }
